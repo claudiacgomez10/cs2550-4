@@ -1,0 +1,39 @@
+#wrapper {
+    grid-template-areas: 
+    "header header"
+    "main aside"
+    "footer footer";
+}
+
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+header, footer {
+    background-color: #1a1a1a;
+    color: #00ffcc;
+    border-top-color: #00ffcc;
+}
+
+aside {
+    background-color: #181818;
+    border-left: 1px solid #333;
+    border-right: none;
+}
+
+section {
+   background-color: #1e1e1e;
+   border-color: #333;
+}
+ .card {
+    background-color: #252525;
+    border-left: none;
+    box-shadow: 0 8px 24px rgb(0, 0, 0, 0.6);
+    border-radius: 12px;
+ }
+
+ .card h3 {
+    color: #00ffcc;
+ }

@@ -1,0 +1,212 @@
+:root {
+    --bg-color: #f7f9f7;
+    --text-color: #2c3e50;
+    --header-bg: #0b4619;
+    --header-text: #f4e8c1;
+    --accent-color: #b3000c;
+    --card-bg: #ffffff;
+    --border-color: #e2ebd8;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#wrapper {
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "aside main"
+    "footer footer";
+    grid-template-columns: 240px 1fr;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    line-height: 1.6;
+    background-color: #f7f9f7;
+    color: #2c3e50;
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "aside main"
+    "footer footer";
+    grid-template-columns: 240px 1fr;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+header {
+    grid-area: header;
+    background: linear-gradient(135deg, #0b4619 0%, #175e29 100%);
+    color: #f4e8c1;
+    padding: 1.8rem;
+    text-align: center;
+    border-bottom: 4px solid #b3000c;
+}
+
+aside {
+    grid-area: aside;
+    background-color: #143d23;
+    padding: 1.5rem 1rem;
+    border-right: 1px solid #0b2b18;
+}
+
+main {
+    grid-area: main;
+    padding: 2rem;
+    background-color: #f8f6f0;
+    width: 100%;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #0b4619;
+    color: #f4e8c1;
+    padding: 1.5rem;
+    text-align: center;
+    border-top: 4px solid #b3000c;
+}
+
+aside nav ul {
+    list-style: none;
+}
+
+aside nav li {
+    margin-bottom: 1rem;
+}
+
+aside nav a {
+    display: block;
+    color: #f4e8c1;
+    text-decoration: none;
+    font-size: 1.05rem;
+    padding: 0.7rem 1rem;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+aside nav a:hover {
+    background-color: #b3000c;
+    color: #ffffff;
+    transform: translateX(4px);
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2.5rem;
+    padding: 1.8rem;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgb(0, 0, 0.08);
+    border: 1px solid #e2ebd8;
+}
+
+section h2 {
+    margin-bottom: 1rem;
+    color: #b3000c;
+    border-bottom: 2px dashed #b3000c;
+    padding-bottom: 0.5rem;
+}
+
+#home {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.card {
+    background: linear-gradient(135deg, #fffcf5 0%, #f4eee1 100%);
+    padding: 1.2rem;
+    border-left: 5px solid #175e29;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgb(0, 0, 0, 0.05);
+}
+
+.card h3 {
+    color: #175e29;
+    margin-bottom: 0.4rem;
+}
+
+.gallery-container figure {
+    flex: 1 1 250px;
+    box-shadow: 0 4px 8px rgb(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid #e2ebd8;
+    text-align: center;
+}
+
+.gallery-container img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.gallery-container figcaption {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+    color: #4a5d4e;
+    font-style: italic;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.video-container iframe {
+    max-width: 100%;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+address {
+    font-style: normal;
+    line-height: 2;
+}
+
+address a {
+    color: #b3000c;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+address a:hover {
+    text-decoration: underline;
+}
+
+details summary {
+    cursor: pointer;
+    margin-top: 0.5rem;
+    color: #f4e8c1;
+}
+
+@media (max-width: 768px) {
+    #wrapper {
+        grid-template-areas: 
+        "header"
+        "aside"
+        "main"
+        "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr auto;
+    }
+
+    aside {
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+    }
+}
